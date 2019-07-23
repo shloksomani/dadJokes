@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5px;
+  background-color: hsl(170, 12%, 10%);
+}
+
+#joke span{
+  padding: 8px;
+  border: 2px hsl(170, 12%, 10%) solid;
+  border-radius: 8px;
+}
+
+.face {
+  right: 0;
+  width: 20em;
+  height: 20em;
+  background-color: hsl(52, 100%, 50%);
+  border-radius: 50%;
+  position: relative;
+}
+
+.face::before {
+  content: "";
+  position: absolute;
+  background-color: hsl(22, 47%, 18%);
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  top: 5.5em;
+  left: 4.5em;
+  box-shadow: 8em 0 0 hsl(22, 47%, 18%);
+}
+
+.face::before {
+  animation: eyes 1s ease-in-out infinite;
+}
+
+.face::after {
+  animation: mouth 1s ease-in-out infinite;
+}
+
+.face::after {
+  content: "";
+  position: absolute;
+  width: 10em;
+  height: 5em;
+  left: 5em;
+  bottom: 4em;
+  background-color: hsl(0, 100%, 32%);
+  border-radius: 25% 25% 50% 50% / 25% 25% 75% 75%;
+}
+
+@keyframes eyes {
+  0%,
+  100% {
+    height: 3em;
+    border-radius: 50%;
+    top: 5.5em;
+  }
+  10%,
+  90% {
+    height: 1.5em;
+    top: 4em;
+    border-radius: 50% 50% 25% 25% / 75% 75% 25% 25%;
+  }
+}
+
+@keyframes mouth {
+  0%,
+  100% {
+    height: 5em;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    height: 7em;
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    height: 8em;
+  }
+}
+
+.canvas {
+  position: relative;
+  width: 960px;
+  height: 540px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10em;
+}
+
+.canvas #joke {
+  text-align: center;
+  font-size: 8em;
+}
+
+.face-bar {
+  position: absolute;
+  height: 20em;
+  border-radius: 10em;
+  background-color: hsl(52, 100%, 50%);
+  width: 20em;
+  left: -20em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.shut {
+  width: 20em;
+  left: -20em;
+  justify-content: flex-end;
+  animation: bar-shut 2s ease-in-out forwards;
+}
+
+.open {
+  width: calc(960px + 20em * 2);
+  left: -20em;
+  justify-content: flex-start;
+  animation: bar-open 2s ease-in-out forwards;
+}
+
+@keyframes bar-shut {
+  0% {
+    width: 20em;
+    left: -20em;
+  }
+  100% {
+    width: calc(960px + 20em * 2);
+    left: -20em;
+  }
+}
+
+@keyframes bar-open {
+  0% {
+    width: calc(960px + 20em * 2);
+    left: -20em;
+  }
+  100% {
+    width: 20em;
+    left: 960px;
+  }
+}
+
+.face-bar:nth-child(1) {
+  top: 0px;
+  animation-delay: 0.5s;
+}
+
+.face-bar:nth-child(2) {
+  top: 90px;
+  animation-delay: 0.1s;
+}
+
+.face-bar:nth-child(3) {
+  top: 180px;
+  animation-delay: 0.2s;
+}
+
+.face-bar:nth-child(4) {
+  top: 270px;
+  animation-delay: 0s;
+}
+
+.face-bar:nth-child(5) {
+  top: 360px;
+  animation-delay: 0.3s;
+}
+
+.face-bar:nth-child(6) {
+  top: 450px;
+  animation-delay: 0.4s;
+}
