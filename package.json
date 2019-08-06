@@ -1,0 +1,25 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "description": "site deployed at - https://shloksomani.github.io/dadJokes/",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shloksomani/dadJokes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shloksomani/dadJokes/issues"
+  },
+  "homepage": "https://github.com/shloksomani/dadJokes#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
+  }
+}
