@@ -99,7 +99,7 @@ body {
 
 .canvas {
   position: relative;
-  width: 960px;
+  width: 100%;
   height: 540px;
   background-color: white;
   display: flex;
