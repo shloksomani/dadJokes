@@ -146,7 +146,7 @@ body {
 }
 
 .open {
-  width: calc(960px + 20em * 2);
+  width: calc(100% + 20em * 2);
   left: -20em;
   justify-content: flex-start;
   animation: bar-open 2s ease-in-out forwards;
@@ -158,19 +158,19 @@ body {
     left: -20em;
   }
   100% {
-    width: calc(960px + 20em * 2);
+    width: calc(100% + 20em * 2);
     left: -20em;
   }
 }
 
 @keyframes bar-open {
   0% {
-    width: calc(960px + 20em * 2);
+    width: calc(100% + 20em * 2);
     left: -20em;
   }
   100% {
     width: 20em;
-    left: 960px;
+    left: 100%;
   }
 }
 
